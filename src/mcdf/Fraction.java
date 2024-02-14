@@ -68,7 +68,7 @@ public class Fraction {
 	 * common factor except 1
 	 */
 	private void simplifyFraction() {
-		BigInteger gcf = euclideanAlgorithm(numerator, denominator);
+		BigInteger gcf = euclideanAlgorithm(numerator.abs(), denominator.abs());
 		numerator = numerator.divide(gcf);
 		denominator = denominator.divide(gcf);
 	}
